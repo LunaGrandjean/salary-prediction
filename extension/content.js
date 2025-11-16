@@ -55,8 +55,28 @@ function getCompany() {
   return company || "";
 }
 
+function getEmployeesCount() {
+  const el = [...document.querySelectorAll("[data-testid='job-company-tag'] span")]
+    .find(e => e.innerText.toLowerCase().includes("collaborateur"));
+
+  if (!el) return 0;
+
+  const match = el.innerText.match(/\d+/);
+  return match ? parseInt(match[0]) : 0;
+}
+
+function getFoundedYear() {
+  const el = [...document.querySelectorAll("[data-testid='job-company-tag'] span")]
+    .find(e => e.innerText.toLowerCase().includes("créée en"));
+
+  if (!el) return 0;
+
+  const match = el.innerText.match(/\d{4}/);
+  return match ? parseInt(match[0]) : 0;
+}
+
 /////////////////////////////////////////////////////////
-// HELPERS / FEATURES SUPPLÉMENTAIRES
+// HELPERS
 /////////////////////////////////////////////////////////
 
 function detectSkill(word) {
@@ -104,11 +124,11 @@ function extractJobData() {
 
     // NUMERIC FEATURES
     rating: 0,
-    founded: 0,
+    founded: getFoundedYear(),
     age: 0,
     desc_len: desc.length,
-    size_min_employees: 0,
-    size_max_employees: 0,
+    size_min_employees: getEmployeesCount(),
+    size_max_employees: getEmployeesCount(),
     revenue_min: 0,
     revenue_max: 0,
 
@@ -164,9 +184,7 @@ function showSalaryBox(salary) {
   box.style.fontSize = "16px";
   box.style.fontWeight = "bold";
 
-  box.innerHTML = `💰 Salaire estimé : <span style="color:#0a4a7a">${salary.toFixed(
-    1
-  )} k€</span>`;
+  box.innerHTML = `💰 Salaire estimé : <span style="color:#0a4a7a">${salary.toFixed(1)} k€</span>`;
 
   header.appendChild(box);
 }
