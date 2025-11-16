@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "WTTJ Salary Predictor",
+  "version": "1.0",
+  "description": "Prédit le salaire des offres sur Welcome To The Jungle.",
+
+  "permissions": ["activeTab", "scripting"],
+
+  "host_permissions": [
+    "https://*.welcometothejungle.com/*",
+    "http://127.0.0.1:5000/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.welcometothejungle.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "icons": {
+    "48": "icon.png"
+  }
+}
