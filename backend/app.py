@@ -8,7 +8,7 @@ CORS(app)
 
 # Load model
 model = joblib.load("final_catboost_model.pkl")
-print("✔️ CatBoost model loaded")
+print("CatBoost model loaded")
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -37,7 +37,7 @@ def predict():
         "revenue_max": data.get("revenue_max", 0),
     }])
 
-    # 🔥 FORCER LES TYPES EXACTS ATTENDUS PAR LE MODÈLE
+    # FORCER LES TYPES EXACTS ATTENDUS PAR LE MODÈLE
     numeric_cols = [
         "rating", "founded", "age",
         "python_yn", "r_yn", "spark", "aws", "excel",

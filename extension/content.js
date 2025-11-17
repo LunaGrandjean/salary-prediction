@@ -1,7 +1,4 @@
-/////////////////////////////////////////////////////////
 // UTILS
-/////////////////////////////////////////////////////////
-
 function safeQuery(selector) {
   const el = document.querySelector(selector);
   return el ? el.innerText.trim() : null;
@@ -13,18 +10,12 @@ function log(...msg) {
 
 log("content.js LOADED !");
 
-/////////////////////////////////////////////////////////
 // DETECTION PAGE OFFRE WTTJ
-/////////////////////////////////////////////////////////
-
 function isJobPage() {
   return window.location.href.includes("/jobs/");
 }
 
-/////////////////////////////////////////////////////////
-// EXTRACTION DES INFOS WTTJ
-/////////////////////////////////////////////////////////
-
+//// EXTRACTION DES INFOS WTTJ
 function getJobTitle() {
   let title = safeQuery('[data-testid="job-metadata-block"] h2');
   if (!title) title = safeQuery("h1");
@@ -75,10 +66,7 @@ function getFoundedYear() {
   return match ? parseInt(match[0]) : 0;
 }
 
-/////////////////////////////////////////////////////////
 // HELPERS
-/////////////////////////////////////////////////////////
-
 function detectSkill(word) {
   return document.body.innerText.toLowerCase().includes(word) ? 1 : 0;
 }
@@ -100,10 +88,7 @@ function seniorityFromTitle(t) {
   return "na";
 }
 
-/////////////////////////////////////////////////////////
 // CONSTRUCTION DES FEATURES EXACTES DU MODELE CATBOOST
-/////////////////////////////////////////////////////////
-
 function extractJobData() {
   const title = getJobTitle();
   const desc = getJobDescription();
@@ -144,10 +129,7 @@ function extractJobData() {
   return data;
 }
 
-/////////////////////////////////////////////////////////
 // API BACKEND
-/////////////////////////////////////////////////////////
-
 async function predictSalary(jobData) {
   try {
     const res = await fetch("http://127.0.0.1:5000/predict", {
@@ -164,10 +146,7 @@ async function predictSalary(jobData) {
   }
 }
 
-/////////////////////////////////////////////////////////
 // UI
-/////////////////////////////////////////////////////////
-
 function showSalaryBox(salary) {
   const header = document.querySelector('[data-testid="job-metadata-block"]');
   if (!header) return;
@@ -184,7 +163,7 @@ function showSalaryBox(salary) {
   box.style.fontSize = "16px";
   box.style.fontWeight = "bold";
 
-  box.innerHTML = `💰 Salaire estimé : <span style="color:#0a4a7a">${salary.toFixed(1)} k€</span>`;
+  box.innerHTML = `Salaire estimé : <span style="color:#0a4a7a">${salary.toFixed(1)} k€</span>`;
 
   header.appendChild(box);
 }
@@ -197,7 +176,7 @@ function addPredictButton() {
 
   const button = document.createElement("button");
   button.id = "predict-btn";
-  button.innerText = "🔮 Prédire le salaire";
+  button.innerText = "Prédire le salaire";
   button.style.padding = "10px 14px";
   button.style.marginTop = "14px";
   button.style.background = "#0ea5e9";
@@ -211,16 +190,13 @@ function addPredictButton() {
     const salary = await predictSalary(data);
 
     if (salary !== null && !isNaN(salary)) showSalaryBox(salary);
-    else alert("Impossible de prédire le salaire 😥");
+    else alert("Impossible de prédire le salaire");
   };
 
   header.appendChild(button);
 }
 
-/////////////////////////////////////////////////////////
 // MAIN
-/////////////////////////////////////////////////////////
-
 function main() {
   if (!isJobPage()) return;
   log("Page détectée : Offre WTTJ");
