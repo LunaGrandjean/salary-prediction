@@ -1,0 +1,22 @@
+artifact_path: file:///c:/Users/33619/OneDrive%20-%20Universit%C3%A9%20Paris%20Sciences%20et%20Lettres/ALBERT_SCHOOL_Y4/Y4_S7/Y4_S7_ML2/project/mlruns/0/models/m-a4e20101dc154495ac1c47ee2e559fbd/artifacts
+flavors:
+  catboost:
+    catboost_version: 1.2.8
+    code: null
+    data: model.cb
+    model_type: CatBoostRegressor
+    save_format: cbm
+  python_function:
+    data: model.cb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.catboost
+    python_version: 3.13.7
+mlflow_version: 3.6.0
+model_id: m-a4e20101dc154495ac1c47ee2e559fbd
+model_size_bytes: 75852
+model_uuid: m-a4e20101dc154495ac1c47ee2e559fbd
+prompts: null
+run_id: d140a76cc8f04057970c0ac44b0f363d
+utc_time_created: '2025-11-18 13:30:40.224783'

@@ -37,6 +37,8 @@ def predict():
         "revenue_max": data.get("revenue_max", 0),
     }])
 
+# à changer car catboost est capable de gerer les na plutot que de les remplacer par 0
+
     # FORCER LES TYPES EXACTS ATTENDUS PAR LE MODÈLE
     numeric_cols = [
         "rating", "founded", "age",

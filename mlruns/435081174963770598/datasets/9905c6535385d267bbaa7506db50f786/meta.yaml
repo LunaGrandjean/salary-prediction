@@ -1,0 +1,29 @@
+digest: 1c1ed2b3
+name: dataset
+profile: '{"num_rows": 584, "num_elements": 18688}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "Unnamed: 0", "required": true},
+  {"type": "string", "name": "Job Title", "required": true}, {"type": "string", "name":
+  "Salary Estimate", "required": true}, {"type": "string", "name": "Job Description",
+  "required": true}, {"type": "double", "name": "Rating", "required": true}, {"type":
+  "string", "name": "Company Name", "required": true}, {"type": "string", "name":
+  "Location", "required": true}, {"type": "string", "name": "Headquarters", "required":
+  true}, {"type": "string", "name": "Size", "required": true}, {"type": "long", "name":
+  "Founded", "required": true}, {"type": "string", "name": "Type of ownership", "required":
+  true}, {"type": "string", "name": "Industry", "required": true}, {"type": "string",
+  "name": "Sector", "required": true}, {"type": "string", "name": "Revenue", "required":
+  true}, {"type": "string", "name": "Competitors", "required": true}, {"type": "long",
+  "name": "hourly", "required": true}, {"type": "long", "name": "employer_provided",
+  "required": true}, {"type": "long", "name": "min_salary", "required": true}, {"type":
+  "long", "name": "max_salary", "required": true}, {"type": "string", "name": "company_txt",
+  "required": true}, {"type": "string", "name": "job_state", "required": true}, {"type":
+  "long", "name": "same_state", "required": true}, {"type": "long", "name": "age",
+  "required": true}, {"type": "long", "name": "python_yn", "required": true}, {"type":
+  "long", "name": "R_yn", "required": true}, {"type": "long", "name": "spark", "required":
+  true}, {"type": "long", "name": "aws", "required": true}, {"type": "long", "name":
+  "excel", "required": true}, {"type": "string", "name": "job_simp", "required": true},
+  {"type": "string", "name": "seniority", "required": true}, {"type": "long", "name":
+  "desc_len", "required": true}, {"type": "long", "name": "num_comp", "required":
+  true}]}'
+source: '{"tags": {"mlflow.user": "33619", "mlflow.source.name": "C:\\Users\\33619\\AppData\\Roaming\\Python\\Python313\\site-packages\\ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/33619/OneDrive%20-%20Universit%C3%A9%20Paris%20Sciences%20et%20Lettres/ALBERT_SCHOOL_Y4/Y4_S7/Y4_S7_ML2/project/mlruns/0/42526168d51c4fedb4d03c8b0b755373/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 42526168d51c4fedb4d03c8b0b755373
+run_name: resilient-steed-36
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763472699492
+status: 1
+tags: []
+user_id: '33619'

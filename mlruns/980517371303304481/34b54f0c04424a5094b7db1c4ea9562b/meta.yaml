@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/33619/OneDrive%20-%20Universit%C3%A9%20Paris%20Sciences%20et%20Lettres/ALBERT_SCHOOL_Y4/Y4_S7/Y4_S7_ML2/project/mlruns/980517371303304481/34b54f0c04424a5094b7db1c4ea9562b/artifacts
+end_time: 1763473486736
+entry_point_name: ''
+experiment_id: '980517371303304481'
+lifecycle_stage: active
+run_id: 34b54f0c04424a5094b7db1c4ea9562b
+run_name: Decision Tree
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763473486314
+status: 4
+tags: []
+user_id: '33619'

@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/33619/OneDrive%20-%20Universit%C3%A9%20Paris%20Sciences%20et%20Lettres/ALBERT_SCHOOL_Y4/Y4_S7/Y4_S7_ML2/project/mlruns/0/models/m-55663c270e424438a0a4e9e30b5866c3/artifacts
+creation_timestamp: 1763472688894
+experiment_id: '0'
+last_updated_timestamp: 1763472699007
+model_id: m-55663c270e424438a0a4e9e30b5866c3
+model_type: null
+name: model
+source_run_id: fafde15819de4b7d9901c0dd2a957cea
+status: 2
+status_message: null
